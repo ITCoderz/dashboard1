@@ -1,6 +1,6 @@
 {
-    "name": "gap_cure_dashboard",
-    "short_name": "gap_cure_dashboard",
+    "name": "Gap Cure",
+    "short_name": "Gap Cure",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
