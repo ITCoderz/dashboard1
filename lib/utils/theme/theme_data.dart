@@ -6,8 +6,25 @@ class CustomThemeData {
   CustomThemeData._();
 
   static ThemeData themeData = ThemeData(
-    fontFamily: 'Inter',
-    scaffoldBackgroundColor: CColors.whiteColor,
+    fontFamily: 'Poppins',
+    scaffoldBackgroundColor: Colors.transparent,
+    scrollbarTheme: ScrollbarThemeData(
+      trackVisibility: MaterialStateProperty.all(
+        true,
+      ),
+      thumbVisibility: MaterialStateProperty.all(
+        true,
+      ),
+      interactive: true,
+      trackColor: MaterialStateProperty.all(
+        CColors.lightBlueTwoColor.withOpacity(0.3),
+      ),
+      thickness: MaterialStateProperty.all(10),
+      thumbColor: MaterialStateProperty.all(
+        CColors.lightBlueTwoColor,
+      ),
+      radius: const Radius.circular(100),
+    ),
     useMaterial3: true,
   );
 }

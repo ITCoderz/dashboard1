@@ -18,8 +18,10 @@ class CustomHorizontalDivider extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Divider(
-      color: CColors.blackColor,
+    return Divider(
+      color: CColors.lightBlueColor.withOpacity(
+        0.32,
+      ),
     );
   }
 }

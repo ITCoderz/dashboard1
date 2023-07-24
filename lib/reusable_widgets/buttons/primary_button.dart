@@ -17,7 +17,7 @@ class PrimaryButton extends StatelessWidget {
     required this.onPressFunction,
     required this.text,
     this.backgroundColor = CColors.primaryColor,
-    this.textStyle = CCustomTextStyles.white613,
+    this.textStyle = CustomTextStyles.white522,
     this.radius = 10,
   });
 

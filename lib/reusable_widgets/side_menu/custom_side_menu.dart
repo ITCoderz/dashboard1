@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:gap_cure_dashboard/generated/assets.dart';
 import 'package:gap_cure_dashboard/utils/gaps/gaps.dart';
 import 'package:get/get.dart';
 import 'package:go_router/go_router.dart';
@@ -8,7 +9,6 @@ import '../../utils/constants/constant_lists.dart';
 import '../../utils/constants/constant_strings.dart';
 import '../../utils/sizes/platform_sizes.dart';
 import '../../utils/text_styles/text_styles.dart';
-import '../buttons/side_menu_logout_button.dart';
 
 class CustomMenuBar extends StatelessWidget {
   final double maxWidth;
@@ -26,83 +26,26 @@ class CustomMenuBar extends StatelessWidget {
       duration: const Duration(
         seconds: 1,
       ),
-      padding: maxWidth > PlatformSizes.maxMediumScreenWidth.round()
-          ? const EdgeInsets.only(
-              left: 15,
-            )
-          : const EdgeInsets.symmetric(
-              horizontal: 5,
-            ),
-      width: maxWidth > PlatformSizes.maxMediumScreenWidth.round() ? 250 : 80,
+      width: maxWidth > PlatformSizes.minLargeScreenWidth.round() ? 300 : 80,
       height: context.height * 1,
       decoration: const BoxDecoration(
-        color: CColors.primaryColor,
-        borderRadius: BorderRadius.only(
-          bottomRight: Radius.circular(
-            10,
-          ),
-          topRight: Radius.circular(
-            10,
-          ),
-        ),
+        color: CColors.menuBarColor,
       ),
       child: SingleChildScrollView(
         child: maxWidth > PlatformSizes.maxMediumScreenWidth.round()
             ? Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  Column(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      // Image.asset(
-                      //   Assets.dashboardAppLogo,
-                      //   height: 90,
-                      // ),
-                      Row(
-                        mainAxisSize: MainAxisSize.min,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Container(
-                            height: 50,
-                            width: 50,
-                            decoration: const BoxDecoration(
-                              shape: BoxShape.circle,
-                              color: CColors.whiteColor,
-                            ),
-                          ),
-                          10.pw,
-                          const Expanded(
-                            child: Column(
-                              mainAxisSize: MainAxisSize.min,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                FittedBox(
-                                  fit: BoxFit.scaleDown,
-                                  alignment: Alignment.centerLeft,
-                                  child: Text(
-                                    "Theodore Hoffman",
-                                    style: CCustomTextStyles.white515,
-                                  ),
-                                ),
-                                FittedBox(
-                                  fit: BoxFit.scaleDown,
-                                  alignment: Alignment.centerLeft,
-                                  child: Text(
-                                    "Founder",
-                                    style: CCustomTextStyles.white514,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ],
-                      ),
-                      30.pw,
-                    ],
-                  ).paddingSymmetric(
-                    horizontal: 15,
+                  40.ph,
+                  const FittedBox(
+                    fit: BoxFit.scaleDown,
+                    alignment: Alignment.centerLeft,
+                    child: Text(
+                      "Gap Cure",
+                      style: CustomTextStyles.white738,
+                    ),
                   ),
-                  50.ph,
+                  100.ph,
                   Flexible(
                     child: ListView.separated(
                       physics: const NeverScrollableScrollPhysics(),
@@ -120,17 +63,11 @@ class CustomMenuBar extends StatelessWidget {
                       },
                     ),
                   ),
-                  50.ph,
-                  LogOutButton(
-                    height: 50,
-                    width: 205,
-                    logOutFunction: () {},
-                  )
                 ],
               )
             : IntrinsicHeight(
                 child: NavigationRail(
-                  backgroundColor: CColors.primaryColor,
+                  backgroundColor: CColors.menuBarColor,
                   selectedIndex: selectedIndex,
                   useIndicator: true,
                   onDestinationSelected: (int index) {
@@ -147,8 +84,8 @@ class CustomMenuBar extends StatelessWidget {
                         break;
                     }
                   },
-                  unselectedLabelTextStyle: CCustomTextStyles.sideMenu515,
-                  selectedLabelTextStyle: CCustomTextStyles.white515,
+                  unselectedLabelTextStyle: CustomTextStyles.white522,
+                  selectedLabelTextStyle: CustomTextStyles.white522,
                   indicatorColor: CColors.whiteColor,
                   selectedIconTheme: const IconThemeData(
                     color: CColors.primaryColor,
@@ -162,12 +99,12 @@ class CustomMenuBar extends StatelessWidget {
                   leading: Column(
                     children: [
                       30.ph,
-                      Container(
-                        height: 50,
-                        width: 50,
-                        decoration: const BoxDecoration(
-                          shape: BoxShape.circle,
-                          color: CColors.whiteColor,
+                      const FittedBox(
+                        fit: BoxFit.scaleDown,
+                        alignment: Alignment.centerLeft,
+                        child: Text(
+                          "Gap Cure",
+                          style: CustomTextStyles.white738,
                         ),
                       ),
                       30.ph,
@@ -184,25 +121,12 @@ class CustomMenuBar extends StatelessWidget {
                         selectedIcon:
                             Icon(ConstantLists.menuList[index].iconData),
                         label: FittedBox(
-                            child:
-                                Text(ConstantLists.menuList[index].menuTitle)),
+                            child: Text(
+                          ConstantLists.menuList[index].menuTitle,
+                        )),
                       ),
                     ]
                   ],
-                  trailing: Column(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      30.ph,
-                      IconButton(
-                        icon: const Icon(
-                          FontAwesomeIcons.arrowRightToBracket,
-                          color: CColors.whiteColor,
-                        ),
-                        onPressed: () {},
-                      ),
-                      30.ph,
-                    ],
-                  ),
                 ),
               ),
       ),
@@ -225,67 +149,52 @@ class SelectionTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Material(
-      color: Colors.transparent,
-      shape: const RoundedRectangleBorder(
-        borderRadius: BorderRadius.only(
-          bottomLeft: Radius.circular(
-            10,
-          ),
-          topLeft: Radius.circular(
-            10,
-          ),
+    return Container(
+      decoration: BoxDecoration(
+        gradient: LinearGradient(
+          colors: CColors.sideMenuTileGradientColor,
+          begin: Alignment.centerLeft,
+          end: Alignment.centerRight,
         ),
       ),
-      child: ListTile(
-        onTap: selectedIndex == itemIndex
-            ? null
-            : () {
-                itemIndex == 0
-                    ? context.goNamed(
-                        ConstantStrings.dashBoardRouteName,
-                      )
-                    : debugPrint("No Route Defined: ");
-              },
-        shape: const RoundedRectangleBorder(
-          borderRadius: BorderRadius.only(
-            bottomLeft: Radius.circular(
-              10,
-            ),
-            topLeft: Radius.circular(
-              10,
-            ),
+      child: Material(
+        color: Colors.transparent,
+        child: ListTile(
+          onTap: selectedIndex == itemIndex
+              ? null
+              : () {
+                  itemIndex == 0
+                      ? context.goNamed(
+                          ConstantStrings.dashBoardRouteName,
+                        )
+                      : debugPrint("No Route Defined: ");
+                },
+          hoverColor: itemIndex == selectedIndex
+              ? Color.alphaBlend(
+                  Color.fromRGBO(
+                    Theme.of(context).colorScheme.surfaceTint.red,
+                    Theme.of(context).colorScheme.surfaceTint.green,
+                    Theme.of(context).colorScheme.surfaceTint.blue,
+                    0.08,
+                  ),
+                  Colors.blue[100]!,
+                )
+              : Colors.blue[100],
+          selected: itemIndex == selectedIndex,
+          selectedTileColor: Colors.transparent,
+          tileColor: Colors.transparent,
+          contentPadding: EdgeInsets.zero,
+          leading: SvgPicture.asset(
+            Assets.sideMenuImagesArrowIcon,
+            height: 35,
           ),
-        ),
-        hoverColor: itemIndex == selectedIndex
-            ? Color.alphaBlend(
-                Color.fromRGBO(
-                  Theme.of(context).colorScheme.surfaceTint.red,
-                  Theme.of(context).colorScheme.surfaceTint.green,
-                  Theme.of(context).colorScheme.surfaceTint.blue,
-                  0.08,
-                ),
-                Colors.blue[100]!,
-              )
-            : Colors.blue[100],
-        selected: itemIndex == selectedIndex,
-        selectedTileColor: CColors.whiteColor,
-        tileColor: CColors.primaryColor,
-        leading: Icon(
-          iconData,
-          color: itemIndex == selectedIndex
-              ? CColors.primaryColor
-              : CColors.whiteColor,
-          size: 17,
-        ),
-        title: FittedBox(
-          fit: BoxFit.scaleDown,
-          alignment: Alignment.centerLeft,
-          child: Text(
-            menuTitle,
-            style: itemIndex == selectedIndex
-                ? CCustomTextStyles.sideMenu515
-                : CCustomTextStyles.white515,
+          title: FittedBox(
+            fit: BoxFit.scaleDown,
+            alignment: Alignment.centerLeft,
+            child: Text(
+              menuTitle,
+              style: CustomTextStyles.white522,
+            ),
           ),
         ),
       ),

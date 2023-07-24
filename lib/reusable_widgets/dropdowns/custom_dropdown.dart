@@ -1,7 +1,6 @@
 import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:flutter/material.dart';
 import '../../utils/colors/app_colors.dart';
-import '../../utils/text_styles/text_styles.dart';
 
 class CustomDropDown extends StatelessWidget {
   final Function(String?)? onChanged;
@@ -54,7 +53,7 @@ class CustomDropDown extends StatelessWidget {
         hint: FittedBox(
           child: Text(
             hintText,
-            style: CCustomTextStyles.black610,
+            // style: CCustomTextStyles.black610,
           ),
         ),
         items: mappingList
@@ -64,7 +63,7 @@ class CustomDropDown extends StatelessWidget {
                   child: FittedBox(
                     child: Text(
                       item,
-                      style: CCustomTextStyles.black610,
+                      // style: CCustomTextStyles.black610,
                     ),
                   ),
                 ))

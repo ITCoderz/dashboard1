@@ -4,7 +4,6 @@ import 'package:gap_cure_dashboard/utils/alignment/widget_alignment.dart';
 
 import '../../../utils/colors/app_colors.dart';
 import '../../../utils/sizes/platform_sizes.dart';
-import '../../../utils/text_styles/text_styles.dart';
 import '../../circular_container.dart';
 
 class GardenersAttributesTable extends StatelessWidget {
@@ -27,8 +26,8 @@ class GardenersAttributesTable extends StatelessWidget {
           color: CColors.primaryColor,
         ),
       ),
-      headingTextStyle: CCustomTextStyles.black610,
-      dataTextStyle: CCustomTextStyles.black410,
+      // headingTextStyle: CCustomTextStyles.black610,
+      // dataTextStyle: CCustomTextStyles.black410,
       columns: const <DataColumn>[
         DataColumn(
           label: Text(

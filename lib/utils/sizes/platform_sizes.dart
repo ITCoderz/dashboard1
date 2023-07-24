@@ -7,9 +7,8 @@ class PlatformSizes {
 
   static const double minLargeScreenWidth = 1008;
 
-  static const double minMediumScreenWidth = 750;
-
   static const double maxMediumScreenWidth = 1007;
+  static const double minMediumScreenWidth = 750;
 
   static const double maxSmallScreenWidth = 749;
 

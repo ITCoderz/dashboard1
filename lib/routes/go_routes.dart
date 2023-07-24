@@ -1,5 +1,5 @@
-import 'package:gap_cure_dashboard/main.dart';
 import 'package:go_router/go_router.dart';
+import '../screens/dashboard/view/dashboard_screen.dart';
 import '../utils/constants/constant_strings.dart';
 
 class GoRouterHelperClass {

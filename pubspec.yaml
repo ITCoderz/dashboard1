@@ -45,6 +45,8 @@ flutter:
     - assets/fonts/poppins/
     - assets/fonts/neutrif_pro/
     - assets/images/
+    - assets/images/side_menu_images/
+    - assets/images/icons/
 
 
 

@@ -1,7 +1,6 @@
 import 'package:data_table_2/data_table_2.dart';
 import 'package:flutter/material.dart';
 import '../../../utils/colors/app_colors.dart';
-import '../../../utils/text_styles/text_styles.dart';
 
 class PaginatedGardenerReviewTableWidget extends StatelessWidget {
   final PaginatorController? paginationController;
@@ -39,28 +38,28 @@ class PaginatedGardenerReviewTableWidget extends StatelessWidget {
           label: Text(
             "Name",
             textAlign: TextAlign.left,
-            style: CCustomTextStyles.black610,
+            // style: CCustomTextStyles.black610,
           ),
         ),
         DataColumn(
           label: Text(
             "Date",
             textAlign: TextAlign.left,
-            style: CCustomTextStyles.black610,
+            // style: CCustomTextStyles.black610,
           ),
         ),
         DataColumn(
           label: Text(
             "Time",
             textAlign: TextAlign.left,
-            style: CCustomTextStyles.black610,
+            // style: CCustomTextStyles.black610,
           ),
         ),
         DataColumn(
           label: Text(
             "Rating",
             textAlign: TextAlign.center,
-            style: CCustomTextStyles.black610,
+            // style: CCustomTextStyles.black610,
           ),
         ),
       ],
@@ -90,25 +89,25 @@ class EnquiriesPaginatedTable extends DataTableSource {
         DataCell(
           Text(
             dataList[index].name,
-            style: CCustomTextStyles.black410,
+            // style: CCustomTextStyles.black410,
           ),
         ),
         DataCell(
           Text(
             dataList[index].date,
-            style: CCustomTextStyles.black410,
+            // style: CCustomTextStyles.black410,
           ),
         ),
         DataCell(
           Text(
             dataList[index].time,
-            style: CCustomTextStyles.black410,
+            // style: CCustomTextStyles.black410,
           ),
         ),
         DataCell(
           Text(
             dataList[index].time,
-            style: CCustomTextStyles.black410,
+            // style: CCustomTextStyles.black410,
           ),
         ),
       ],
