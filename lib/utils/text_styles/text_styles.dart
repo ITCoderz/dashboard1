@@ -47,6 +47,12 @@ class CustomTextStyles {
     fontFamily: "Poppins",
     color: CColors.whiteColor,
   );
+  static const TextStyle whiteAccent416 = TextStyle(
+    fontWeight: FontWeight.w400,
+    fontSize: 16,
+    fontFamily: "Poppins",
+    color: CColors.whiteAccentColor,
+  );
   static const TextStyle red414 = TextStyle(
     fontWeight: FontWeight.w400,
     fontSize: 14,

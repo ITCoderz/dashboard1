@@ -4,6 +4,7 @@ class CColors {
   CColors._();
 
   static const Color whiteColor = Color(0xFFFFFFFF);
+  static const Color whiteAccentColor = Color(0xFFDFDFDF);
   static const Color blackColor = Color(0xFF000000);
   static const Color primaryColor = Color(0xFF040429);
   static const Color darkColor = Color(0xFF06043B);
@@ -13,6 +14,7 @@ class CColors {
   static const Color lightBlueColor = Color(0xFF4B6FD6);
   static const Color lightBlueTwoColor = Color(0xFF788AD7);
   static const Color redColor = Color(0xFFDE4355);
+  static const Color greenColor = Color(0xFF5CB97C);
 
   static List<Color> sideMenuTileGradientColor = [
     const Color(0xFF4B6FD6).withOpacity(0.9),

@@ -25,6 +25,7 @@ dependencies:
   data_table_2: ^2.5.5
   get: ^4.6.5
   url_strategy: ^0.2.0
+  roundcheckbox: ^2.0.5
 
 dev_dependencies:
   flutter_test:
