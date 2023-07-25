@@ -29,11 +29,47 @@ class CustomTextStyles {
     fontFamily: "Poppins",
     color: CColors.whiteColor,
   );
+  static const TextStyle white636 = TextStyle(
+    fontWeight: FontWeight.w600,
+    fontSize: 36,
+    fontFamily: "Poppins",
+    color: CColors.whiteColor,
+  );
+  static const TextStyle white618 = TextStyle(
+    fontWeight: FontWeight.w600,
+    fontSize: 18,
+    fontFamily: "Poppins",
+    color: CColors.whiteColor,
+  );
   static const TextStyle white522 = TextStyle(
     fontWeight: FontWeight.w500,
     fontSize: 22,
     fontFamily: "Poppins",
     color: CColors.whiteColor,
+  );
+  static const TextStyle white516 = TextStyle(
+    fontWeight: FontWeight.w500,
+    fontSize: 16,
+    fontFamily: "Poppins",
+    color: CColors.whiteColor,
+  );
+  static const TextStyle black518 = TextStyle(
+    fontWeight: FontWeight.w500,
+    fontSize: 18,
+    fontFamily: "Poppins",
+    color: CColors.blackColor,
+  );
+  static const TextStyle black416 = TextStyle(
+    fontWeight: FontWeight.w400,
+    fontSize: 16,
+    fontFamily: "Poppins",
+    color: CColors.blackColor,
+  );
+  static const TextStyle black414 = TextStyle(
+    fontWeight: FontWeight.w400,
+    fontSize: 14,
+    fontFamily: "Poppins",
+    color: CColors.blackColor,
   );
   static TextStyle hintTextStyle = TextStyle(
     fontWeight: FontWeight.w400,
@@ -47,11 +83,35 @@ class CustomTextStyles {
     fontFamily: "Poppins",
     color: CColors.whiteColor,
   );
+  static const TextStyle darkBlue414 = TextStyle(
+    fontWeight: FontWeight.w400,
+    fontSize: 14,
+    fontFamily: "Poppins",
+    color: CColors.darkBlueColor,
+  );
+  static const TextStyle lightBlue414 = TextStyle(
+    fontWeight: FontWeight.w400,
+    fontSize: 14,
+    fontFamily: "Poppins",
+    color: CColors.lightBlueColor,
+  );
   static const TextStyle whiteAccent416 = TextStyle(
     fontWeight: FontWeight.w400,
     fontSize: 16,
     fontFamily: "Poppins",
     color: CColors.whiteAccentColor,
+  );
+  static const TextStyle white416 = TextStyle(
+    fontWeight: FontWeight.w400,
+    fontSize: 16,
+    fontFamily: "Poppins",
+    color: CColors.whiteColor,
+  );
+  static const TextStyle whiteAccentTwo416 = TextStyle(
+    fontWeight: FontWeight.w400,
+    fontSize: 16,
+    fontFamily: "Poppins",
+    color: CColors.whiteAccentTwoColor,
   );
   static const TextStyle red414 = TextStyle(
     fontWeight: FontWeight.w400,

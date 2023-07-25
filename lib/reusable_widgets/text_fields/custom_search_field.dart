@@ -1,30 +1,30 @@
 import 'package:flutter/material.dart';
+import 'package:gap_cure_dashboard/utils/gaps/gaps.dart';
 
 import '../../utils/colors/app_colors.dart';
 
-class CustomTextField extends StatelessWidget {
+class CustomSearchTextField extends StatelessWidget {
   final String? Function(String?)? validatorFunction;
-  final Function()? onTapFunction;
   final TextEditingController textEditingController;
   final Color fillColor;
   final double? width, height;
-  final bool? enabled, showCursor;
+  final bool enabled;
+  final Function(String)? onChangedFunction;
   final int? maxLines;
   final String? hintText;
   final TextStyle? textStyle, hintStyle;
 
-  const CustomTextField({
+  const CustomSearchTextField({
     Key? key,
-    this.fillColor = CColors.containerDarkColor,
+    this.fillColor = CColors.primaryColor,
     this.width = 350,
     this.height = 50,
     this.enabled = true,
-    this.hintText,
-    this.onTapFunction,
+    this.hintText = "Search here...",
+    this.onChangedFunction,
     this.validatorFunction,
     this.maxLines,
-    this.hintStyle,
-    this.showCursor = true,
+    required this.hintStyle,
     required this.textStyle,
     required this.textEditingController,
   }) : super(key: key);
@@ -41,7 +41,6 @@ class CustomTextField extends StatelessWidget {
         textAlignVertical: TextAlignVertical.center,
         style: textStyle,
         keyboardType: TextInputType.text,
-        showCursor: showCursor,
         decoration: InputDecoration(
           contentPadding: const EdgeInsets.symmetric(
             vertical: 10,
@@ -51,32 +50,50 @@ class CustomTextField extends StatelessWidget {
           fillColor: fillColor,
           hintText: hintText,
           hintStyle: hintStyle,
+          prefixIcon: Row(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              15.pw,
+              const Icon(
+                Icons.search_rounded,
+                size: 25,
+              ),
+              5.pw,
+            ],
+          ),
+          prefixIconColor: CColors.lightBlueColor,
           enabledBorder: const OutlineInputBorder(
-            borderSide: BorderSide.none,
+            borderSide: BorderSide(
+              color: CColors.lightBlueColor,
+            ),
             borderRadius: BorderRadius.all(
               Radius.circular(
-                10,
+                100,
               ),
             ),
           ),
           focusedBorder: const OutlineInputBorder(
-            borderSide: BorderSide.none,
+            borderSide: BorderSide(
+              color: CColors.lightBlueColor,
+            ),
             borderRadius: BorderRadius.all(
               Radius.circular(
-                10,
+                100,
               ),
             ),
           ),
           border: const OutlineInputBorder(
-            borderSide: BorderSide.none,
+            borderSide: BorderSide(
+              color: CColors.lightBlueColor,
+            ),
             borderRadius: BorderRadius.all(
               Radius.circular(
-                10,
+                100,
               ),
             ),
           ),
         ),
-        onTap: onTapFunction,
+        onChanged: onChangedFunction,
         validator: validatorFunction,
       ),
     );

@@ -7,8 +7,10 @@ class CustomVerticalDivider extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const VerticalDivider(
-      color: CColors.blackColor,
+    return VerticalDivider(
+      color: CColors.lightBlueColor.withOpacity(
+        0.32,
+      ),
     );
   }
 }

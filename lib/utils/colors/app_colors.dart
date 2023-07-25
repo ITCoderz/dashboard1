@@ -5,10 +5,12 @@ class CColors {
 
   static const Color whiteColor = Color(0xFFFFFFFF);
   static const Color whiteAccentColor = Color(0xFFDFDFDF);
+  static const Color whiteAccentTwoColor = Color(0xFFE3E3E3);
   static const Color blackColor = Color(0xFF000000);
   static const Color primaryColor = Color(0xFF040429);
   static const Color darkColor = Color(0xFF06043B);
   static const Color menuBarColor = Color(0xFF11112F);
+  static const Color containerDarkColor = Color(0xFF181731);
   static const Color darkBlueColor = Color(0xFF3B4DCE);
   static const Color darkBlueSecondColor = Color(0xFF1F34B0);
   static const Color lightBlueColor = Color(0xFF4B6FD6);

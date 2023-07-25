@@ -6,6 +6,7 @@ class CustomThemeData {
   CustomThemeData._();
 
   static ThemeData themeData = ThemeData(
+    primaryColor: CColors.darkBlueColor,
     fontFamily: 'Poppins',
     scaffoldBackgroundColor: Colors.transparent,
     scrollbarTheme: ScrollbarThemeData(
@@ -19,7 +20,7 @@ class CustomThemeData {
       trackColor: MaterialStateProperty.all(
         CColors.lightBlueTwoColor.withOpacity(0.3),
       ),
-      thickness: MaterialStateProperty.all(10),
+      thickness: MaterialStateProperty.all(7),
       thumbColor: MaterialStateProperty.all(
         CColors.lightBlueTwoColor,
       ),
