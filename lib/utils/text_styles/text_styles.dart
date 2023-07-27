@@ -23,6 +23,12 @@ class CustomTextStyles {
     fontFamily: "Poppins",
     color: CColors.whiteColor,
   );
+  static const TextStyle white420 = TextStyle(
+    fontWeight: FontWeight.w400,
+    fontSize: 20,
+    fontFamily: "Poppins",
+    color: CColors.whiteColor,
+  );
   static const TextStyle white626 = TextStyle(
     fontWeight: FontWeight.w600,
     fontSize: 26,

@@ -3,6 +3,7 @@ import 'package:gap_cure_dashboard/utils/constants/constant_lists.dart';
 import 'package:get/get.dart';
 
 class DashboardController extends GetxController {
+  ScrollController dashboardScrollController = ScrollController();
   TextEditingController searchController = TextEditingController();
   TextEditingController patientSearchController = TextEditingController();
   TextEditingController dashboardDateController = TextEditingController();
@@ -99,5 +100,14 @@ class DashboardController extends GetxController {
         }
       },
     );
+  }
+
+  dashBoardControllerJumpFunction() {
+    dashboardScrollController.animateTo(0,
+        duration: const Duration(
+          milliseconds: 1000,
+        ), //duration of scroll
+        curve: Curves.fastOutSlowIn //scroll type
+        );
   }
 }
