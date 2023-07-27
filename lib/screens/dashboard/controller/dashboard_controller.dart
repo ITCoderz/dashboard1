@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 
 class DashboardController extends GetxController {
   ScrollController dashboardScrollController = ScrollController();
+  ScrollController bottomBarController = ScrollController();
   TextEditingController searchController = TextEditingController();
   TextEditingController patientSearchController = TextEditingController();
   TextEditingController dashboardDateController = TextEditingController();
